@@ -2,7 +2,7 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Exercise_Alfasoft.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="RunTime" Type="System.DateTime" Scope="User">
+    <Setting Name="RunRequest" Type="System.DateTime" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

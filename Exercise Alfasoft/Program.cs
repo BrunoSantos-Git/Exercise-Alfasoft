@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading;
 
 namespace Exercise_Alfasoft
@@ -12,49 +11,62 @@ namespace Exercise_Alfasoft
     {
         static void Main(string[] args)
         {
-            bool canContinue;
-            string path;
-            List<string> requests = new List<string>();
-            do
+            var lastRequest = Properties.Settings.Default.RunRequest; // Get last time app request made
+            var now = DateTime.Now; // Get current date with time
+            if (lastRequest == null || (now - lastRequest).TotalSeconds >= 60)
             {
-                Console.WriteLine("Input users file path:");
-                path = Console.ReadLine();
-
-                canContinue = ValidPath(path);
-
-                if (!canContinue)
+                bool canContinue;
+                string path;
+                List<string> requests = new List<string>();
+                do
                 {
-                    Console.WriteLine("\nInvalid File!\n");
+                    Console.WriteLine("Input users file path:");
+                    path = Console.ReadLine();
+
+                    canContinue = ValidPath(path);
+
+                    if (!canContinue)
+                    {
+                        Console.WriteLine("\nInvalid File!\n");
+                    }
+
+                } while (!canContinue);
+
+                // Read all lines of file
+                string[] users = File.ReadAllLines(path);
+
+                foreach (var user in users)
+                {
+                    string url = "https://api.bitbucket.org/2.0/users/" + user;
+                    var request = WebRequest.Create(url) as HttpWebRequest;
+
+                    Console.WriteLine("===============================================================================================");
+                    Console.WriteLine("User being retrieved: {0}", user);
+                    Console.WriteLine("URL: {0}", url);
+
+                    using (var response = request.GetResponse() as HttpWebResponse)
+                    {
+                        var reader = new StreamReader(response.GetResponseStream());
+                        string json = reader.ReadToEnd();
+                        requests.Add(json);
+                        Console.WriteLine("Output: \n{0}", json);
+                    }
+                    Console.WriteLine("===============================================================================================");
+
+                    if (user != users.Last()) // If is not the last user in list
+                        Thread.Sleep(5000);   // Wait 5 seconds
                 }
 
-            } while (!canContinue);
+                AddToLogFile(requests);
 
-            // Read all lines of file
-            string[] users = File.ReadAllLines(path);
-
-            foreach (var user in users)
-            {
-                string url = "https://api.bitbucket.org/2.0/users/" + user;
-                var request = WebRequest.Create(url) as HttpWebRequest;
-
-                Console.WriteLine("===============================================================================================");
-                Console.WriteLine("User being retrieved: {0}", user);
-                Console.WriteLine("URL: {0}", url);
-
-                using (var response = request.GetResponse() as HttpWebResponse)
-                {
-                    var reader = new StreamReader(response.GetResponseStream());
-                    string json = reader.ReadToEnd();
-                    requests.Add(json);
-                    Console.WriteLine("Output: {0}\n", json);
-                }
-                Console.WriteLine("===============================================================================================");
-
-                if (user != users.Last()) // If is not the last user in list
-                    Thread.Sleep(5000);   // Wait 5 seconds
+                // Save last app run
+                Properties.Settings.Default.RunRequest = DateTime.Now;
+                Properties.Settings.Default.Save();
             }
-
-            AddToLogFile(requests);
+            else
+            {
+                Console.WriteLine("The application was run in less than 60 seconds ago");
+            }
 
             Console.WriteLine("\nPress any key to exit...");
             Console.ReadKey(true); // Do not display the pressed key
@@ -105,7 +117,7 @@ namespace Exercise_Alfasoft
                 {
                     w.WriteLine("Request: " + request);
                 }
-                w.WriteLine("===============================================================================================\n");
+                w.WriteLine("\n===============================================================================================\n");
             }
         }
     }

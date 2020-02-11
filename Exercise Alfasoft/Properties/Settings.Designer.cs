@@ -25,12 +25,12 @@ namespace Exercise_Alfasoft.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.DateTime RunTime {
+        public global::System.DateTime RunRequest {
             get {
-                return ((global::System.DateTime)(this["RunTime"]));
+                return ((global::System.DateTime)(this["RunRequest"]));
             }
             set {
-                this["RunTime"] = value;
+                this["RunRequest"] = value;
             }
         }
     }
