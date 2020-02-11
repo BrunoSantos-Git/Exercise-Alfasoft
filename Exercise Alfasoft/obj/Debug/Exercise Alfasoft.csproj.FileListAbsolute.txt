@@ -3,3 +3,9 @@ C:\Users\bruno\source\repos\Exercise Alfasoft\Exercise Alfasoft\bin\Debug\Exerci
 C:\Users\bruno\source\repos\Exercise Alfasoft\Exercise Alfasoft\bin\Debug\Exercise Alfasoft.pdb
 C:\Users\bruno\source\repos\Exercise Alfasoft\Exercise Alfasoft\obj\Debug\Exercise Alfasoft.exe
 C:\Users\bruno\source\repos\Exercise Alfasoft\Exercise Alfasoft\obj\Debug\Exercise Alfasoft.pdb
+C:\Users\bruno\Documents\GitHub\Exercise-Alfasoft\Exercise Alfasoft\bin\Debug\Exercise Alfasoft.exe.config
+C:\Users\bruno\Documents\GitHub\Exercise-Alfasoft\Exercise Alfasoft\bin\Debug\Exercise Alfasoft.exe
+C:\Users\bruno\Documents\GitHub\Exercise-Alfasoft\Exercise Alfasoft\bin\Debug\Exercise Alfasoft.pdb
+C:\Users\bruno\Documents\GitHub\Exercise-Alfasoft\Exercise Alfasoft\obj\Debug\Exercise Alfasoft.csprojAssemblyReference.cache
+C:\Users\bruno\Documents\GitHub\Exercise-Alfasoft\Exercise Alfasoft\obj\Debug\Exercise Alfasoft.exe
+C:\Users\bruno\Documents\GitHub\Exercise-Alfasoft\Exercise Alfasoft\obj\Debug\Exercise Alfasoft.pdb

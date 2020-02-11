@@ -31,6 +31,27 @@ namespace Exercise_Alfasoft
             // Read all lines of file
             string[] users = File.ReadAllLines(path);
 
+            foreach (var user in users)
+            {
+                string url = "https://api.bitbucket.org/2.0/users/" + user;
+                var request = WebRequest.Create(url) as HttpWebRequest;
+
+                Console.WriteLine("===============================================================================================");
+                Console.WriteLine("User being retrieved: {0}", user);
+                Console.WriteLine("URL: {0}", url);
+
+                using (var response = request.GetResponse() as HttpWebResponse)
+                {
+                    var reader = new StreamReader(response.GetResponseStream());
+                    string json = reader.ReadToEnd();
+                    Console.WriteLine("Output: {0}\n", json);
+                }
+                Console.WriteLine("===============================================================================================");
+
+                if (user != users.Last()) // If is not the last user in list
+                    Thread.Sleep(5000);   // Wait 5 seconds
+            }
+
             Console.WriteLine("\nPress any key to exit...");
             Console.ReadKey(true); // Do not display the pressed key
             for (int i = 5; i != 0; i--)
