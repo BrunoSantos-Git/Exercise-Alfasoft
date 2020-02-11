@@ -13,10 +13,11 @@ namespace Exercise_Alfasoft
         static void Main(string[] args)
         {
             bool canContinue;
+            string path;
             do
             {
                 Console.WriteLine("Input users file path:");
-                string path = Console.ReadLine();
+                path = Console.ReadLine();
 
                 canContinue = ValidPath(path);
 
@@ -26,6 +27,9 @@ namespace Exercise_Alfasoft
                 }
 
             } while (!canContinue);
+
+            // Read all lines of file
+            string[] users = File.ReadAllLines(path);
 
             Console.WriteLine("\nPress any key to exit...");
             Console.ReadKey(true); // Do not display the pressed key
