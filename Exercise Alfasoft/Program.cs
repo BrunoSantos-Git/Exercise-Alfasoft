@@ -14,6 +14,7 @@ namespace Exercise_Alfasoft
         {
             bool canContinue;
             string path;
+            List<string> requests = new List<string>();
             do
             {
                 Console.WriteLine("Input users file path:");
@@ -44,6 +45,7 @@ namespace Exercise_Alfasoft
                 {
                     var reader = new StreamReader(response.GetResponseStream());
                     string json = reader.ReadToEnd();
+                    requests.Add(json);
                     Console.WriteLine("Output: {0}\n", json);
                 }
                 Console.WriteLine("===============================================================================================");
@@ -51,6 +53,8 @@ namespace Exercise_Alfasoft
                 if (user != users.Last()) // If is not the last user in list
                     Thread.Sleep(5000);   // Wait 5 seconds
             }
+
+            AddToLogFile(requests);
 
             Console.WriteLine("\nPress any key to exit...");
             Console.ReadKey(true); // Do not display the pressed key
@@ -83,6 +87,26 @@ namespace Exercise_Alfasoft
             }
 
             return true;
+        }
+
+        /// <summary>
+        /// Create log file with requests made
+        /// </summary>
+        /// <param name="requests"></param>
+        private static void AddToLogFile(List<string> requests)
+        {
+            string currPath = Directory.GetCurrentDirectory();
+            string logFilePath = Path.Combine(currPath, "log.txt");
+
+            using (StreamWriter w = File.AppendText(logFilePath))
+            {
+                w.WriteLine("[Log Entry: " + DateTime.Now + "]");
+                foreach (var request in requests)
+                {
+                    w.WriteLine("Request: " + request);
+                }
+                w.WriteLine("===============================================================================================\n");
+            }
         }
     }
 }
