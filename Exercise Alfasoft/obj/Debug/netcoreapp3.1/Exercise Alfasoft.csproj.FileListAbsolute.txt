@@ -8,3 +8,4 @@ C:\Users\bruno\Documents\GitHub\Exercise-Alfasoft\Exercise Alfasoft\obj\Debug\ne
 C:\Users\bruno\Documents\GitHub\Exercise-Alfasoft\Exercise Alfasoft\obj\Debug\netcoreapp3.1\Exercise Alfasoft.AssemblyInfo.cs
 C:\Users\bruno\Documents\GitHub\Exercise-Alfasoft\Exercise Alfasoft\obj\Debug\netcoreapp3.1\Exercise Alfasoft.dll
 C:\Users\bruno\Documents\GitHub\Exercise-Alfasoft\Exercise Alfasoft\obj\Debug\netcoreapp3.1\Exercise Alfasoft.pdb
+C:\Users\bruno\Documents\GitHub\Exercise-Alfasoft\Exercise Alfasoft\obj\Debug\netcoreapp3.1\Exercise Alfasoft.csprojAssemblyReference.cache
