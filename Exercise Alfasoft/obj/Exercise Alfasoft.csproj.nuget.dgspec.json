@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bruno\\source\\repos\\Exercise Alfasoft\\Exercise Alfasoft\\Exercise Alfasoft.csproj": {}
+    "C:\\Users\\bruno\\Documents\\GitHub\\Exercise-Alfasoft\\Exercise Alfasoft\\Exercise Alfasoft.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bruno\\source\\repos\\Exercise Alfasoft\\Exercise Alfasoft\\Exercise Alfasoft.csproj": {
+    "C:\\Users\\bruno\\Documents\\GitHub\\Exercise-Alfasoft\\Exercise Alfasoft\\Exercise Alfasoft.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bruno\\source\\repos\\Exercise Alfasoft\\Exercise Alfasoft\\Exercise Alfasoft.csproj",
+        "projectUniqueName": "C:\\Users\\bruno\\Documents\\GitHub\\Exercise-Alfasoft\\Exercise Alfasoft\\Exercise Alfasoft.csproj",
         "projectName": "Exercise Alfasoft",
-        "projectPath": "C:\\Users\\bruno\\source\\repos\\Exercise Alfasoft\\Exercise Alfasoft\\Exercise Alfasoft.csproj",
+        "projectPath": "C:\\Users\\bruno\\Documents\\GitHub\\Exercise-Alfasoft\\Exercise Alfasoft\\Exercise Alfasoft.csproj",
         "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bruno\\source\\repos\\Exercise Alfasoft\\Exercise Alfasoft\\obj\\",
+        "outputPath": "C:\\Users\\bruno\\Documents\\GitHub\\Exercise-Alfasoft\\Exercise Alfasoft\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",

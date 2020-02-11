@@ -1,0 +1,10 @@
+C:\Users\bruno\Documents\GitHub\Exercise-Alfasoft\Exercise Alfasoft\bin\Debug\netcoreapp3.1\Exercise Alfasoft.exe
+C:\Users\bruno\Documents\GitHub\Exercise-Alfasoft\Exercise Alfasoft\bin\Debug\netcoreapp3.1\Exercise Alfasoft.deps.json
+C:\Users\bruno\Documents\GitHub\Exercise-Alfasoft\Exercise Alfasoft\bin\Debug\netcoreapp3.1\Exercise Alfasoft.runtimeconfig.json
+C:\Users\bruno\Documents\GitHub\Exercise-Alfasoft\Exercise Alfasoft\bin\Debug\netcoreapp3.1\Exercise Alfasoft.runtimeconfig.dev.json
+C:\Users\bruno\Documents\GitHub\Exercise-Alfasoft\Exercise Alfasoft\bin\Debug\netcoreapp3.1\Exercise Alfasoft.dll
+C:\Users\bruno\Documents\GitHub\Exercise-Alfasoft\Exercise Alfasoft\bin\Debug\netcoreapp3.1\Exercise Alfasoft.pdb
+C:\Users\bruno\Documents\GitHub\Exercise-Alfasoft\Exercise Alfasoft\obj\Debug\netcoreapp3.1\Exercise Alfasoft.AssemblyInfoInputs.cache
+C:\Users\bruno\Documents\GitHub\Exercise-Alfasoft\Exercise Alfasoft\obj\Debug\netcoreapp3.1\Exercise Alfasoft.AssemblyInfo.cs
+C:\Users\bruno\Documents\GitHub\Exercise-Alfasoft\Exercise Alfasoft\obj\Debug\netcoreapp3.1\Exercise Alfasoft.dll
+C:\Users\bruno\Documents\GitHub\Exercise-Alfasoft\Exercise Alfasoft\obj\Debug\netcoreapp3.1\Exercise Alfasoft.pdb
